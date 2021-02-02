@@ -1,0 +1,40 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+
+<body>
+
+<br>
+<h2>Insert in form your employee:</h2>
+
+
+<%--<form action="showDetails" method="get">--%>
+
+    <%--    <input type="text" name="employeeName" placeholder="Write your name.">--%>
+    <%--    <input type="text" name="employeeSName" placeholder="Write your Sname.">--%>
+    <%--    <input type="text" name="employeeMail" placeholder="Write your mail">--%>
+    <%--    <input type="submit">--%>
+
+    <%--</form>--%>
+<form:form action="showDetails" modelAttribute="employee">
+    Name <form:input path="name"/>
+    <br>
+    Surname<form:input path="surname"/>
+    <br>
+    Mail<form:input path="mail"/>
+    <br>
+    <input type="submit" value="Add">
+
+
+</form:form>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
