@@ -7,6 +7,7 @@
 <br>
 <h2>Insert in form your name:</h2>
 
+<%--@elvariable id="employee" type="by.anton.spring.mvc.Employee"--%>
 <form:form action="showDetails" modelAttribute="employee" >
     Name <form:input path="name"/>
     <form:errors path="name"/>
@@ -14,6 +15,7 @@
     Surname<form:input path="surname"/>
     <br><br>
     Mail<form:input path="mail"/>
+        <form:errors path="mail"/>
     <br><br>
     Department <form:select path="department">
         <form:options items="${employee.departments}"/>

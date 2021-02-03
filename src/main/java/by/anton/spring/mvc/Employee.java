@@ -1,5 +1,6 @@
 package by.anton.spring.mvc;
 
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,8 +9,11 @@ public class Employee {
     @Size(min = 2,max = 10,message = "Min 2 chars, max 10 chars")
     private String name;
     private String surname;
+    @Pattern(regexp = "\\w{2,}@\\w{2,}\\.(ru|com)",message = "XXXX@XXXX.(ru|com)")
     private String mail;
     private String department;
+    @Pattern(regexp = "\\+\\d{3}\\-\\d{2}\\-\\d{7}",message = "+XXX-XX-XXXXXX")
+    private String phone;
     private Map<String,String> departments;
     private String car;
     private static Map<String,String> cars;
@@ -33,6 +37,14 @@ public class Employee {
         languages.put("Russian","RU");
 
 
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getCar() {

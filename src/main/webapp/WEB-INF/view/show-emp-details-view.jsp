@@ -31,7 +31,7 @@
 <br>
 
 
-<table border="1" >
+<table>
     <tr>
         <th>Name</th>
         <th>Surname</th>
@@ -39,6 +39,7 @@
         <th>Department</th>
         <th>Car</th>
         <th>Languages</th>
+        <th>Phone</th>
     </tr>
     <tr>
         <td>${employee.name}</td>
@@ -49,6 +50,7 @@
         <td><c:forEach var="language" items="${employee.language}">
             ${language}
         </c:forEach></td>
+        <td>${employee.phone}</td>
     </tr>
     <tr>
 

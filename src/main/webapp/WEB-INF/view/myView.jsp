@@ -9,7 +9,7 @@
 <form:form action="showDetails" modelAttribute="employee">
 
 
-<table border="1" >
+<table>
     <tr>
         <th>Name</th>
         <th>Surname</th>
@@ -17,17 +17,19 @@
         <th>Department</th>
         <th>Car</th>
         <th>Languages</th>
+        <th>Phone</th>
     </tr>
     <tr>
-        <td><form:input path="name"/></td>
-        <td><form:input path="surname"/></td>
-        <td><form:input path="mail"/></td>
+        <td><form:input path="name"/><form:errors path="name"/> </td>
+        <td><form:input path="surname"/><form:errors path="surname"/></td>
+        <td><form:input path="mail"/><form:errors path="mail"/></td>
         <td><form:select path="department">
             <form:options items="${employee.departments}"/>
 
         </form:select></td>
         <td><form:radiobuttons path="car" items="${employee.cars}"/></td>
         <td><form:checkboxes path="language" items="${employee.languages}"/></td>
+        <td><form:input path="phone"/><form:errors path="phone"/> </td>
     </tr>
     <tr>
 
